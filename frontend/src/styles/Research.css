@@ -1,0 +1,116 @@
+.research {
+  background-color: var(--bg-secondary);
+}
+
+.research-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.research-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.research-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  transition: var(--transition);
+  cursor: pointer;
+  height: 100%;
+}
+
+.research-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-accent);
+  border-color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(139, 111, 71, 0.02) 100%);
+}
+
+
+.research-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.research-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.research-card-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.research-card-link:hover {
+  color: var(--primary-color-hover, #3b82f6);
+  text-decoration: underline;
+}
+
+.research-status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.research-status-published {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.research-status-ongoing {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.research-status-draft {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.research-status-published {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .research-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .research-list {
+    grid-template-columns: 1fr;
+  }
+}
+

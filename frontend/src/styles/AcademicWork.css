@@ -1,0 +1,129 @@
+/* Academic Work Section */
+.academic-work {
+  background-color: var(--bg-secondary);
+}
+
+.academic-work-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Research Cards Grid */
+.research-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+/* Research Card */
+.research-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+}
+
+.research-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-accent);
+  border-color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(139, 111, 71, 0.02) 100%);
+}
+
+.research-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 0;
+}
+
+.research-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.research-card-description {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.research-card-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-top: 0.75rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.research-card-link:hover {
+  color: var(--primary-color-hover, #3b82f6);
+  text-decoration: underline;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.status-badge-published {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.status-badge-ongoing {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.status-badge-draft {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .research-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .research-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .research-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .status-badge {
+    align-self: flex-start;
+  }
+}
+
