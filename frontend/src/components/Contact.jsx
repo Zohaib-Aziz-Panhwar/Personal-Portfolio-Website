@@ -65,13 +65,15 @@ const Contact = () => {
               Thank you for reaching out! Your message has been successfully sent.
               I appreciate you taking the time to contact me and will get back to you as soon as possible.
             </p>
-            <button 
-              type="button" 
-              className="btn btn-primary contact-success-close"
-              onClick={() => setShowSuccessDialog(false)}
-            >
-              Done
-            </button>
+            <div className="contact-success-actions">
+              <button 
+                type="button" 
+                className="btn btn-primary contact-success-close btn-ripple"
+                onClick={() => setShowSuccessDialog(false)}
+              >
+                <span className="btn-ripple-text">Done</span>
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -118,13 +120,15 @@ const Contact = () => {
                   {submitStatus.message}
                 </div>
               )}
-              <button 
-                type="submit" 
-                className="btn btn-primary"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
+              <div className="contact-form-actions">
+                <button 
+                  type="submit" 
+                  className="btn btn-primary contact-submit-btn btn-ripple"
+                  disabled={isSubmitting}
+                >
+                  <span className="btn-ripple-text">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                </button>
+              </div>
             </form>
           </div>
           <div className="contact-info">
